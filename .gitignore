@@ -1,0 +1,17 @@
+node_modules
+.cache
+.vercel
+.output
+build
+public/build
+api/*
+/app/tailwind.css
+/app/styles
+.env
+.env.*
+test-results/
+playwright-report/
+.eslintcache
+
+!.env.sample
+!.env.*.sample
