@@ -1,7 +1,7 @@
 {
   "private": true,
-  "name": "remix-prisma-starter",
-  "description": "A Remix starter with Prisma and Vercel",
+  "name": "gachame",
+  "description": "積みゲーって何からやるか迷いますよね。そこでガチャのようにランダムに排出して消化するゲームを出せたらという発想から作られたサービスです。語源はgacha + game でGachaMeです。",
   "license": "MIT",
   "scripts": {
     "clean": "rm -rf .eslintcache playwright-report build public/build .cache",
