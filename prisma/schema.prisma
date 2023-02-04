@@ -9,18 +9,19 @@ datasource db {
 
 // ユーザー
 model User {
-  id        String   @id @default(uuid())
-  email     String   @unique // メールアドレス
-  name      String // 氏名
-  password  String // パスワード
-  age       Int? // 年齢
-  gender    String? // 性別
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
+  id             String   @id @default(uuid())
+  email          String   @unique // メールアドレス
+  name           String // 氏名
+  password       String // パスワード
+  age            Int? // 年齢
+  gender         Gender?  @default(OTHER) // 性別
+  allowSensitive Boolean? @default(false) // R指定、センシティブ許可
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
   // ゲームリスト
-  Games     Game[]
+  Games          Game[]
   // プロフィール
-  Profile   Profile?
+  Profile        Profile?
 
   // テーブルの物理名
   @@map("users")
@@ -28,14 +29,15 @@ model User {
 
 // プロフィール管理用
 model Profile {
-  id        String   @id @default(uuid())
-  nickName  String   @map("nick_name") // ニックネーム
-  image     String? // プロフィール画像
-  createdAt DateTime @default(now()) @map("created_at") // 登録日時
-  updatedAt DateTime @default(now()) @map("updated_at") // 更新日時
+  id               String   @id @default(uuid())
+  nickName         String   @map("nick_name") // ニックネーム
+  image            String? // プロフィール画像
+  selfIntroduction String?  @map("self_introduction") // 自己紹介
+  createdAt        DateTime @default(now()) @map("created_at") // 登録日時
+  updatedAt        DateTime @default(now()) @map("updated_at") // 更新日時
   // 親テーブルの関連づけ
-  userId    String   @unique
-  user      User     @relation(fields: [userId], references: [id])
+  userId           String   @unique
+  user             User     @relation(fields: [userId], references: [id])
 
   // テーブルの物理名
   @@map("profiles")
@@ -45,7 +47,7 @@ model Profile {
 model Game {
   id              String           @id @default(uuid())
   title           String // ゲームタイトル
-  content         String // ゲーム内容
+  description     String // ゲーム内容
   image           String? // ゲーム画像
   evaluation      Int?             @default(0) // ゲーム評価
   interest        Int              @default(0) // ゲーム興味度
@@ -53,6 +55,10 @@ model Game {
   character       String? // 推しキャラ
   characterImage  String? // 推しキャラ画像
   memo            String? // メモ
+  platform        String? // プラットフォーム
+  sensitive       Boolean?         @default(false) // R指定、センシティブ判定
+  status          Status           @default(UN_PLAYED) // 消化状況
+  releaseDate     DateTime?        @map("release_date") // 発売日
   createdAt       DateTime         @default(now())
   updatedAt       DateTime         @updatedAt
   // ユーザ
@@ -86,6 +92,8 @@ model GameGenre {
 model GameMaker {
   id        String   @id @default(uuid())
   maker     String   @unique // ゲームメーカー
+  developer String? // 開発元
+  publisher String? // 発売元
   image     String? // ゲームメーカー画像
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
@@ -98,17 +106,31 @@ model GameMaker {
 
 // ゲーム消化
 model GameConsumption {
-  id         String   @id @default(uuid())
-  status     Boolean  @default(false) // 消化状況
-  progress   Int? // 進捗度
-  fun        Int      @default(0) // 面白さ度
-  recommend  Int      @default(0) // おすすめ度
-  impression String? // 感想
-  createdAt  DateTime @default(now())
-  updatedAt  DateTime @updatedAt
-  gameId     String   @unique
-  game       Game     @relation(fields: [gameId], references: [id])
+  id          String   @id @default(uuid())
+  progress    Int? // 進捗度
+  fun         Int      @default(0) // 面白さ度
+  recommend   Int      @default(0) // おすすめ度
+  review      String? // レビュー
+  reviewDate  DateTime @default(now()) @map("review_date") // レビュー日
+  reviewImage String? // レビュー画像
+  impression  String? // 感想
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  gameId      String   @unique
+  game        Game     @relation(fields: [gameId], references: [id])
 
   // テーブルの物理名
   @@map("game_consumptions")
+}
+
+enum Gender {
+  MALE // 男性
+  FEMALE // 女性
+  OTHER // その他
+}
+
+enum Status {
+  UN_PLAYED // 未消化
+  PLAYING // 消化中
+  PLAYED // 消化済み
 }
