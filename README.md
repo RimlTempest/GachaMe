@@ -2,7 +2,7 @@
 
 積みゲーって何からやるか迷いますよね。  
 そこでガチャのようにランダムに排出して消化するゲームを出せたらという発想から作られたサービスです。  
-語源はgacha + game でGachaMeです。
+語源は `gacha + game` でGachaMeです。
 
 - [Remix Docs](https://remix.run/docs)
 
@@ -26,7 +26,7 @@ git clone https://github.com/RimlTempest/GachaMe.git
 
 ### 開発環境
 
-pnpm で依存パッケージを落とす
+pnpmで依存パッケージを落とす
 
 ```bash
 pnpm i
@@ -38,7 +38,7 @@ dockerでpostgres環境を立ち上げる
 docker compose up -d
 ```
 
-1. マイグレーションファイル(Create table)生成 / テーブルの構成変えた際に実行
+1. マイグレーションファイル（Create table）生成 / テーブルの構成変えた際に実行
 
 ```bash
 pnpm prisma migrate dev --name init
@@ -74,15 +74,15 @@ pnpm prisma studio
 
 #### vercel Deploy
 
-まず当サービスはクラウドサービス等を使うほど大きなサービスではない + 簡単なアプリケーションで無料で完結したいためVercelに上げることを前提として作成されています。  
+まず当サービスはクラウドサービス等を使うほど大きなサービスではない + 無料で完結したいためVercelに上げることを前提として作成されています。  
 サービスが大きくなったり、クラウドサービスを利用する価値が出てきたら移行する想定です。
 
-[Vercel CLI](https://vercel.com/cli) で提供されている `vercel dev` コマンドを代わりに使うことに慣れている場合は、そちらを使うこともできます。
+[Vercel CLI](https://vercel.com/cli) で提供されている `vercel dev` コマンドを使うことに慣れている場合は、そちらを使うこともできます。
 
 1. `create-remix` コマンドを実行し、デプロイ先として "Vercel" を選択
-2. Git リポジトリを Vercel に [import](https://vercel.com/new) するだけで、デプロイされます。
+2. Gitリポジトリを `Vercel` に [import](https://vercel.com/new) するだけで、デプロイされます。
 
-Git リポジトリを使用しない場合は、[Vercel CLI](https://vercel.com/cli) を実行して、ディレクトリをデプロイすることも可能です。
+Gitリポジトリを使用しない場合は、[Vercel CLI](https://vercel.com/cli) を実行して、ディレクトリをデプロイすることも可能です。
 
 Vercel CLIを利用したい場合は環境をローカルに導入しましょう
 
@@ -97,7 +97,7 @@ Vercelの [Git Integration](https://vercel.com/docs/concepts/git) により、�
 
 テスト環境として `playwright` と `react-testing-library` ユーティリティがセットアップされています。  
 
-E2E テストを行う際は `.env.test` ファイルの設定を使用し、異なるデータベースと異なる開発サーバーポートを使用します。
+E2Eテストを行う際は `.env.test` ファイルの設定を使用し、異なるデータベースと異なる開発サーバーポートを使用します。
 テストを実行するたびに、データベースを削除してリセットするので、毎回、不具合のないテストができるようになります。
 
 初回にテストを実行する際は以下のコマンドを実行してください。
