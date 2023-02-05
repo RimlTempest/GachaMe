@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-2083,-1950)">
+        <g transform="matrix(2.02015,0,0,2.02017,1792.78,1393.69)">
+            <rect x="142.327" y="275.741" width="396.011" height="396.011" style="fill:none;"/>
+            <g>
+                <g transform="matrix(0.495014,0,0,0.495007,20.8331,-127.895)">
+                    <rect x="376.538" y="946.522" width="537.796" height="537.796" style="fill:url(#_Linear1);"/>
+                </g>
+                <g transform="matrix(1,0,0,1,0.341708,-17.7807)">
+                    <g transform="matrix(0.495014,0,0,0.495007,27.3552,-93.4813)">
+                        <path d="M466.07,1065.63L797.07,1065.63C804.736,1065.63 810.959,1059.4 810.959,1051.74C810.959,1044.07 804.736,1037.85 797.07,1037.85L466.07,1037.85C458.405,1037.85 452.181,1044.07 452.181,1051.74C452.181,1059.4 458.405,1065.63 466.07,1065.63Z" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(0.495014,0,0,0.495007,27.3552,-29.0909)">
+                        <path d="M466.07,1065.63L797.07,1065.63C804.736,1065.63 810.959,1059.4 810.959,1051.74C810.959,1044.07 804.736,1037.85 797.07,1037.85L466.07,1037.85C458.405,1037.85 452.181,1044.07 452.181,1051.74C452.181,1059.4 458.405,1065.63 466.07,1065.63Z" style="fill:white;"/>
+                    </g>
+                    <g transform="matrix(0.495014,0,0,0.495007,27.3552,35.2996)">
+                        <path d="M466.07,1065.63L797.07,1065.63C804.736,1065.63 810.959,1059.4 810.959,1051.74C810.959,1044.07 804.736,1037.85 797.07,1037.85L466.07,1037.85C458.405,1037.85 452.181,1044.07 452.181,1051.74C452.181,1059.4 458.405,1065.63 466.07,1065.63Z" style="fill:white;"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(4.89865e-14,800.011,-800.011,4.89865e-14,645.436,815.415)"><stop offset="0" style="stop-color:rgb(150,225,170);stop-opacity:1"/><stop offset="0.38" style="stop-color:rgb(94,196,188);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(0,149,217);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>

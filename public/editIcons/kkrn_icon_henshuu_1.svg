@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 800" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-235,-809)">
+        <g transform="matrix(2.02015,0,0,2.02017,-51.8034,252.584)">
+            <rect x="142.327" y="275.741" width="396.011" height="396.011" style="fill:none;"/>
+            <g transform="matrix(0.438448,1.94707e-16,0,0.438442,43.3343,-538.649)">
+                <rect x="346.455" y="2053.77" width="586.231" height="586.231" style="fill:url(#_Linear1);"/>
+            </g>
+            <g transform="matrix(0.566871,0.566864,-0.566879,0.566871,428.548,-2.80923)">
+                <g transform="matrix(0.594813,0,0,0.594805,6.91982,-220.585)">
+                    <rect x="491.57" y="845.039" width="41.333" height="525.333" style="fill:url(#_Linear2);"/>
+                </g>
+                <g transform="matrix(0.594813,0,0,0.594805,68.7804,-220.585)">
+                    <rect x="491.57" y="845.039" width="41.333" height="525.333" style="fill:url(#_Linear3);"/>
+                </g>
+                <g transform="matrix(0.901814,0,0,0.594805,-119.407,-220.585)">
+                    <rect x="491.57" y="845.039" width="41.333" height="525.333" style="fill:url(#_Linear4);"/>
+                </g>
+                <g transform="matrix(0.495014,0,0,0.495007,25.6434,-125.031)">
+                    <path d="M552.851,1453.62L727.485,1453.62L640.168,1609.64L552.851,1453.62Z" style="fill:url(#_Linear5);"/>
+                </g>
+                <g transform="matrix(0.141729,0,0,0.141727,251.805,443.622)">
+                    <path d="M552.851,1453.62L727.485,1453.62L640.168,1609.64L552.851,1453.62Z" style="fill:url(#_Linear6);"/>
+                </g>
+            </g>
+        </g>
+    </g>
+    <defs>
+        <linearGradient id="_Linear1" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-903.21,903.223,-903.223,-903.21,1128.99,1857.46)"><stop offset="0" style="stop-color:rgb(235,223,204);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(237,238,211);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear2" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-282.134,525.333,-41.3333,-22.1984,773.704,845.039)"><stop offset="0" style="stop-color:rgb(122,192,232);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(89,86,172);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear3" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-409.256,588.653,-46.3153,-32.2003,532.903,845.039)"><stop offset="0" style="stop-color:rgb(122,192,232);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(89,86,172);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear4" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(-310.51,470.773,-2603,-3946.48,667.491,900.908)"><stop offset="0" style="stop-color:rgb(122,192,232);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(89,86,172);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear5" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(174.634,0,0,156.02,552.851,1531.63)"><stop offset="0" style="stop-color:rgb(236,202,120);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(229,229,211);stop-opacity:1"/></linearGradient>
+        <linearGradient id="_Linear6" x1="0" y1="0" x2="1" y2="0" gradientUnits="userSpaceOnUse" gradientTransform="matrix(174.634,0,0,156.02,552.851,1531.63)"><stop offset="0" style="stop-color:rgb(69,76,84);stop-opacity:1"/><stop offset="1" style="stop-color:rgb(148,151,158);stop-opacity:1"/></linearGradient>
+    </defs>
+</svg>
