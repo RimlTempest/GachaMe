@@ -25,7 +25,10 @@
     "prepare": "husky install",
     "deploy": "npm run db:migrate && npm run build",
     "docker:dev": "docker compose up -d",
-    "docker:clean": "docker-compose down"
+    "docker:clean": "docker-compose down",
+    "icons": "npx @svgr/cli --out-dir app/components/icons -- public",
+    "icons:watch": "npm-watch icons",
+    "dev:svg": "run-s icons icons:watch"
   },
   "prisma": {
     "seed": "ts-node prisma/seed.ts"
@@ -36,6 +39,15 @@
   "sideEffects": false,
   "lint-staged": {
     "*.{ts,tsx}": "lint"
+  },
+  "watch": {
+    "icons": {
+      "patterns": [
+        "icons"
+      ],
+      "extensions": "svg",
+      "quiet": false
+    }
   },
   "dependencies": {
     "@formkit/auto-animate": "1.0.0-beta.6",
@@ -67,6 +79,10 @@
     "@playwright-testing-library/test": "^4.5.0",
     "@playwright/test": "^1.30.0",
     "@remix-run/dev": "1.12.0",
+    "@svgr/cli": "^6.5.1",
+    "@svgr/plugin-jsx": "^6.5.1",
+    "@svgr/plugin-prettier": "^6.5.1",
+    "@svgr/plugin-svgo": "^6.5.1",
     "@types/accept-language-parser": "^1.5.3",
     "@types/lodash": "^4.14.191",
     "@types/react": "^18.0.27",
