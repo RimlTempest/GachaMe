@@ -1,10 +1,10 @@
 import { RemixServer } from "@remix-run/react";
-import type { EntryContext } from "@remix-run/server-runtime";
-import { renderToString } from "react-dom/server";
-import { getServerEnvVar } from "./lib/env.server";
+import type { EntryContext, HandleDataRequestFunction } from '@remix-run/node';
+import { renderToString } from 'react-dom/server';
+import { getServerEnvVar } from './lib/env.server';
 
-if (!getServerEnvVar("SECRET_KEY_BASE")) {
-  throw new Error("Please provide a SECRET_KEY_BASE env var!");
+if (!getServerEnvVar('SECRET_KEY_BASE')) {
+  throw new Error('Please provide a SECRET_KEY_BASE env var!');
 }
 
 export default function handleRequest(
@@ -24,3 +24,13 @@ export default function handleRequest(
     headers: responseHeaders,
   });
 }
+
+export const handleDataRequest: HandleDataRequestFunction =
+  (
+    response: Response,
+    // same args that get passed to the action or loader that was called
+    { request, params, context }
+  ) => {
+    response.headers.set("x-custom", "yay!");
+    return response;
+  };
