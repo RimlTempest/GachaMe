@@ -16,30 +16,25 @@
       { "name": "NavLink", "linkAttribute": "to" }
     ]
   },
-  "plugins": [
-    "prettier",
-    "@typescript-eslint",
-    "jsx-a11y",
-    "import",
-    "react",
-    "react-hooks",
-    "lodash"
-  ],
   "extends": [
+    // ESLintの推奨ルールを有効化
     "eslint:recommended",
-    "prettier",
-    "plugin:prettier/recommended",
     "plugin:@typescript-eslint/recommended",
+    // アクセシビリティのためのルールを有効化
     "plugin:jsx-a11y/recommended",
+    // importのルールを有効化
     "plugin:import/recommended",
     "plugin:import/typescript",
+    // Reactのルールを有効化
     "plugin:react/jsx-runtime",
     "plugin:react/recommended",
-    "plugin:react-hooks/recommended"
+    "plugin:react-hooks/recommended",
+    // tailwindcssのルールを有効化
+    "plugin:tailwindcss/recommended",
+    // prettierのルールを有効化
+    "prettier"
   ],
   "rules": {
-    "lodash/import-scope": [2, "method"],
-    "prettier/prettier": "error",
     "import/no-unresolved": "off",
     "@typescript-eslint/no-unused-vars": [
       "error",

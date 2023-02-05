@@ -16,5 +16,6 @@
     "noEmit": true,
     "allowJs": true,
     "forceConsistentCasingInFileNames": true
-  }
+  },
+  "exclude": ["prisma/seed.ts","node_modules", "build", "coverage", "remix.init", "test"]
 }
