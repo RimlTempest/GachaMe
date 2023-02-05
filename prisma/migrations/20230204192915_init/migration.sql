@@ -10,7 +10,7 @@ CREATE TABLE "users" (
     "email" TEXT NOT NULL,
     "name" TEXT NOT NULL,
     "password" TEXT NOT NULL,
-    "age" INTEGER,
+    "age" INTEGER NOT NULL,
     "gender" "Gender" DEFAULT 'OTHER',
     "allowSensitive" BOOLEAN DEFAULT false,
     "createdAt" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP,

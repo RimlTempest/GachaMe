@@ -9,10 +9,8 @@ export const SERVER_ENV_VARS = { SECRET_KEY_BASE: process.env.SECRET_KEY_BASE };
  */
 
 export function getServerEnvVar(key: keyof typeof SERVER_ENV_VARS): string {
-  if (typeof window !== "undefined") {
-    throw new Error(
-      "You cannot access this env variable. It's server only! Please fix this ASAP."
-    );
+  if (typeof window !== 'undefined') {
+    throw new Error("You cannot access this env variable. It's server only! Please fix this ASAP.");
   }
 
   return process.env[key] as string;

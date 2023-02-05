@@ -1,4 +1,4 @@
-import argon from "argon2";
+import argon from 'argon2';
 
 /** パスワードを暗号化
  * @param {string} password - パスワード
@@ -13,9 +13,6 @@ export async function encryptPassword(password: string): Promise<string> {
  * @param {string} password - パスワード
  * @return {Promise<string>} パスワードが一致するか
  */
-export async function verifyPassword(
-  hash: string,
-  password: string
-): Promise<boolean> {
+export async function verifyPassword(hash: string, password: string): Promise<boolean> {
   return argon.verify(hash, password);
 }

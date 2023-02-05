@@ -8,28 +8,26 @@ import {
   useCatch,
   useLoaderData,
   useMatches,
-} from "@remix-run/react";
-import { DataFunctionArgs } from "@remix-run/server-runtime";
-import acceptLanguage from "accept-language-parser";
-import React from "react";
-import GlobalLayout from "./components/layouts/GlobalLayout";
-import { ToastsRenderer } from "./hooks/useToast";
-import { CLIENT_ENV_VARS } from "./lib/env.server";
-import styles from "./styles/index.css";
+} from '@remix-run/react';
+import { DataFunctionArgs } from '@remix-run/server-runtime';
+import acceptLanguage from 'accept-language-parser';
+import React from 'react';
+import GlobalLayout from './components/layouts/GlobalLayout';
+import { ToastsRenderer } from './hooks/useToast';
+import { CLIENT_ENV_VARS } from './lib/env.server';
+import styles from './styles/index.css';
 
 export function links() {
-  return [{ rel: "stylesheet", href: styles }];
+  return [{ rel: 'stylesheet', href: styles }];
 }
 
 // Load the locale from the Accept-Language header to later
 // inject it on the app's context
 function localeFromRequest(request: Request): string {
-  const languages = acceptLanguage.parse(
-    request.headers.get("Accept-Language") as string
-  );
+  const languages = acceptLanguage.parse(request.headers.get('Accept-Language') as string);
 
   // If somehow the header is empty, return a default locale
-  if (languages?.length < 1) return "en-us";
+  if (languages?.length < 1) return 'en-us';
 
   // If there is no region for this locale, just return the country code
   if (!languages[0].region) return languages[0].code;
@@ -69,7 +67,7 @@ export default function App() {
 
 export function ErrorBoundary({ error }: { error: Error }) {
   // This is where you would log server side errors to your error handling tool
-  console.error("Error", error);
+  console.error('Error', error);
 
   return (
     <Document title="Error!">
@@ -78,10 +76,7 @@ export function ErrorBoundary({ error }: { error: Error }) {
           <h1>There was an error</h1>
           <p>{error.message}</p>
           <hr />
-          <p>
-            Hey, developer, you should replace this with what you want your
-            users to see.
-          </p>
+          <p>Hey, developer, you should replace this with what you want your users to see.</p>
         </div>
       </GlobalLayout>
     </Document>
@@ -94,17 +89,10 @@ export function CatchBoundary() {
   let message;
   switch (caught.status) {
     case 401:
-      message = (
-        <p>
-          Oops! Looks like you tried to visit a page that you do not have access
-          to.
-        </p>
-      );
+      message = <p>Oops! Looks like you tried to visit a page that you do not have access to.</p>;
       break;
     case 404:
-      message = (
-        <p>Oops! Looks like you tried to visit a page that does not exist.</p>
-      );
+      message = <p>Oops! Looks like you tried to visit a page that does not exist.</p>;
       break;
 
     default:
@@ -123,13 +111,7 @@ export function CatchBoundary() {
   );
 }
 
-function Document({
-  children,
-  title,
-}: {
-  children: React.ReactNode;
-  title?: string;
-}) {
+function Document({ children, title }: { children: React.ReactNode; title?: string }) {
   return (
     <React.StrictMode>
       <html className="bg-base-100" lang="en">

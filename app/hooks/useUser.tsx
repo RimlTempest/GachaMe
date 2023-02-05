@@ -1,8 +1,8 @@
-import { createContext, ReactNode, useContext } from "react";
-import { AuthedRouteData } from "~/routes/__authed";
+import { createContext, ReactNode, useContext } from 'react';
+import { AuthedRouteData } from '~/routes/__authed';
 
-const UserContext = createContext<AuthedRouteData["user"]>(
-  undefined as unknown as AuthedRouteData["user"]
+const UserContext = createContext<AuthedRouteData['user']>(
+  undefined as unknown as AuthedRouteData['user'],
 );
 
 export function UserProvider({
@@ -10,7 +10,7 @@ export function UserProvider({
   user,
 }: {
   children: ReactNode;
-  user: AuthedRouteData["user"];
+  user: AuthedRouteData['user'];
 }) {
   return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
 }

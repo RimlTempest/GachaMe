@@ -13,7 +13,7 @@ model User {
   email          String   @unique // メールアドレス
   name           String // 氏名
   password       String // パスワード
-  age            Int? // 年齢
+  age            Int // 年齢（センシティブ判定のため）
   gender         Gender?  @default(OTHER) // 性別
   allowSensitive Boolean? @default(false) // R指定、センシティブ許可
   createdAt      DateTime @default(now())

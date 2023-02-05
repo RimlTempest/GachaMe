@@ -1,10 +1,6 @@
-import { useAutoAnimate } from "@formkit/auto-animate/react";
+import { useAutoAnimate } from '@formkit/auto-animate/react';
 
-export default function GlobalLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function GlobalLayout({ children }: { children: React.ReactNode }) {
   const [animationParent] = useAutoAnimate<HTMLDivElement>();
 
   return (

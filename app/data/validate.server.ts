@@ -1,4 +1,4 @@
-import { ValidationError, ObjectSchema } from "yup";
+import { ValidationError, ObjectSchema } from 'yup';
 
 function capitalize(string: string) {
   const lower = string.toLowerCase();
@@ -9,7 +9,7 @@ function capitalize(string: string) {
 export default function errorsFromSchema(
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   schema: ObjectSchema<any>,
-  value: unknown
+  value: unknown,
 ): undefined | Record<string, string> {
   try {
     schema.validateSync(value, { abortEarly: false });
@@ -18,7 +18,7 @@ export default function errorsFromSchema(
       (error as ValidationError).inner.map((errorObj) => [
         errorObj.path,
         capitalize(errorObj.message),
-      ])
+      ]),
     );
   }
 }

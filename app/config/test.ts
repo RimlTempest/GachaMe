@@ -1,4 +1,4 @@
-import { ConfigType } from ".";
+import { ConfigType } from '.';
 
 export default function testConfig(): ConfigType {
   return {

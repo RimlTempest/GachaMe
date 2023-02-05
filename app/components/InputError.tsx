@@ -1,4 +1,4 @@
-import get from "lodash/get";
+import get from 'lodash/get';
 
 interface InputErrorProps {
   errors?: Record<string, string>;
